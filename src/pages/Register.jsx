@@ -19,7 +19,10 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/auth/register", formData);
+      await axios.post(
+        "book-recommendation-backend-production.up.railway.app/api/auth/register",
+        formData
+      );
       navigate("/login");
     } catch (err) {
       let { message } = err.response.data;

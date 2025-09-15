@@ -18,11 +18,14 @@ const Favorites = () => {
 
     const fetchFavorites = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/favorites", {
-          headers: {
-            Authorization: `Bearer ${userData.token}`,
-          },
-        });
+        const res = await axios.get(
+          "book-recommendation-backend-production.up.railway.app/api/favorites",
+          {
+            headers: {
+              Authorization: `Bearer ${userData.token}`,
+            },
+          }
+        );
         console.log("Favorites response:", res.data);
         setFavorites(res.data);
       } catch (err) {
@@ -44,11 +47,14 @@ const Favorites = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:3000/api/favorites/${bookId}`, {
-        headers: {
-          Authorization: `Bearer ${userData.token}`,
-        },
-      });
+      await axios.delete(
+        `book-recommendation-backend-production.up.railway.app/api/favorites/${bookId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${userData.token}`,
+          },
+        }
+      );
       alert("Book removed from favorites!");
       setFavorites((prevFavorites) =>
         prevFavorites.filter((favorite) => favorite.bookId !== bookId)

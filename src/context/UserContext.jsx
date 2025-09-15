@@ -29,11 +29,14 @@ export const UserProvider = ({ children }) => {
     console.log("Checking localStorage for token:", token); // Log the token
     if (token && !userData) {
       axios
-        .get("http://localhost:3000/api/auth/user", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
+        .get(
+          "book-recommendation-backend-production.up.railway.app/api/auth/user",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((res) => {
           console.log("Auto-login response:", res.data); // Log response for auto-login
           setUserData({ ...res.data, token });
