@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "book-recommendation-backend-production.up.railway.app/api/auth/register",
+        "https://book-recommendation-backend-production.up.railway.app/api/auth/register",
         formData
       );
       navigate("/login");

@@ -19,7 +19,7 @@ const Favorites = () => {
     const fetchFavorites = async () => {
       try {
         const res = await axios.get(
-          "book-recommendation-backend-production.up.railway.app/api/favorites",
+          "https://book-recommendation-backend-production.up.railway.app/api/favorites",
           {
             headers: {
               Authorization: `Bearer ${userData.token}`,
@@ -48,7 +48,7 @@ const Favorites = () => {
 
     try {
       await axios.delete(
-        `book-recommendation-backend-production.up.railway.app/api/favorites/${bookId}`,
+        `https://book-recommendation-backend-production.up.railway.app/api/favorites/${bookId}`,
         {
           headers: {
             Authorization: `Bearer ${userData.token}`,

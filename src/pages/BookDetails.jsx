@@ -44,7 +44,7 @@ const BookDetails = () => {
   const fetchAverageRating = async () => {
     try {
       const res = await axios.get(
-        `book-recommendation-backend-production.up.railway.app/api/ratings/${bookId}`
+        `https://book-recommendation-backend-production.up.railway.app/api/ratings/${bookId}`
       );
       if (res.data.average) {
         setAverageRating(res.data.average.toFixed(1));
@@ -62,7 +62,7 @@ const BookDetails = () => {
 
     try {
       await axios.post(
-        `book-recommendation-backend-production.up.railway.app/api/ratings/${bookId}`,
+        `https://book-recommendation-backend-production.up.railway.app/api/ratings/${bookId}`,
         {
           rating,
           review: "", // You can add a review field later
@@ -87,7 +87,7 @@ const BookDetails = () => {
 
     try {
       await axios.post(
-        "book-recommendation-backend-production.up.railway.app/api/favorites",
+        "https://book-recommendation-backend-production.up.railway.app/api/favorites",
         {
           userId: userData.id,
           bookId,

@@ -30,7 +30,7 @@ export const UserProvider = ({ children }) => {
     if (token && !userData) {
       axios
         .get(
-          "book-recommendation-backend-production.up.railway.app/api/auth/user",
+          "https://book-recommendation-backend-production.up.railway.app/api/auth/user",
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -20,7 +20,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "book-recommendation-backend-production.up.railway.app/api/auth/login",
+        "https://book-recommendation-backend-production.up.railway.app/api/auth/login",
         formData
       );
       loginUser(res.data); // Save user data in context
