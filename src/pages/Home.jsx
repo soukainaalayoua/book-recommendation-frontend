@@ -26,7 +26,7 @@ const Home = () => {
         className="min-h-screen bg-cover bg-center flex flex-col items-center justify-center text-white px-4 py-12"
         style={{
           backgroundImage:
-            "url('https://th.bing.com/th/id/OIP.7iPB4-SZsrVyIVOC2Pia1AHaEJ?rs=1&pid=ImgDetMain')",
+            "url('https://img.freepik.com/premium-photo/row-old-books-blue-shelf-horizontal-background-banner_118047-9024.jpg')",
         }}
       >
         {/* Hero Section */}
