@@ -19,10 +19,9 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(
-        "https://book-recommendation-backend-production.up.railway.app/api/auth/register",
-        formData
-      );
+      const API_URL = process.env.REACT_APP_API_URL;
+
+      await axios.post(`${API_URL}/auth/register`, formData);
       navigate("/login");
     } catch (err) {
       let { message } = err.response.data;
